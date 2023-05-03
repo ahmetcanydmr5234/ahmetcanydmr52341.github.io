@@ -1,0 +1,95 @@
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #4fb99f;
+    overflow: auto;
+}
+
+ul li {
+    float: left;
+    border-bottom: 3px solid #4fb99f;
+}
+
+ul li a {
+    display: inline-block;
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+ul li.active {
+    background-color: #068587;
+    border-bottom: 3px solid #f2b134;
+}
+
+ul li:hover:not(.active) {
+    background-color: #068587;
+    border-bottom: 3px solid #f2b134;
+}
+
+.hamburger-btn {
+    display: none;
+    cursor: pointer;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background-color: #068587;
+    float: right;
+}
+
+.hamburger-btn .bar1, .hamburger-btn .bar2, .hamburger-btn .bar3 {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger-change .bar1 {
+    transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.hamburger-change .bar2 {
+    /*IE8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*IE 5-7*/
+    filter: alpha(opacity=0);
+    /*Modern Browsers*/
+    opacity: 0;
+}
+
+.hamburger-change .bar3 {
+    transform: rotate(45deg) translate(-6px, -6px);
+}
+
+@media screen and (max-width: 768px) {
+ul {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 0px;
+    width: 100%;
+}
+
+ul li {
+    float: none;
+    border-bottom: none;
+    border-left: 6px solid #4fb99f;
+}
+
+ul li.active {
+    border-bottom: none;
+    border-left: 6px solid #f2b134;
+}
+
+ul li:hover:not(.active) {
+    border-bottom: none;
+    border-left: 6px solid #f2b134;
+}
+
+.hamburger-btn {
+    display: inline-block;
+    }
+}
